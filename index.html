@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrinho - Tecnologia no Campo</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <h1>Tecnologia e Sustentabilidade no Campo</h1>
+    <button id="modoEscuro">Modo Escuro</button>
+</header>
+
+<main>
+    <section class="conteudo">
+        <img src="img/agricultura.jpg" alt="Agricultura moderna">
+
+        <h2>O Futuro da Agricultura</h2>
+
+        <p id="texto">
+            A tecnologia ajuda produtores rurais a economizar recursos,
+            aumentar a produção e preservar o meio ambiente.
+        </p>
+
+        <button id="mostrarMensagem">Saiba Mais</button>
+
+        <div id="mensagem" style="display:none;">
+            Sensores, drones e inteligência artificial tornam a agricultura mais eficiente e sustentável.
+        </div>
+    </section>
+
+    <section>
+        <h2>Envie sua opinião</h2>
+
+        <form>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome">
+
+            <label for="comentario">Comentário:</label>
+            <input type="text" id="comentario">
+
+            <button type="button" id="enviar">Enviar</button>
+        </form>
+
+        <p id="resultado"></p>
+    </section>
+</main>
+
+<script src="js/script.js"></script>
+</body>
+</html>
