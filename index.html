@@ -1,53 +1,211 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agrinho - Tecnologia no Campo</title>
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Campo em Foco | Juventude Rural e Clima</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-<body>
+<body class="light-mode">
+    <!-- HEADER PRINCIPAL -->
+    <header class="main-header">
+        <div class="container header-container">
+            <div class="logo-area">
+                <span class="logo-icon"><i class="fas fa-leaf"></i></span>
+                <h1 class="logo">Campo<span>emFoco</span></h1>
+            </div>
+            
+            <nav class="nav-menu" id="navMenu">
+                <ul class="nav-links">
+                    <li><a href="#" class="active">Início</a></li>
+                    <li><a href="#">Notícias</a></li>
+                    <li><a href="#">Sustentabilidade</a></li>
+                    <li><a href="#">Juventude</a></li>
+                    <li><a href="#">Eventos</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+                    <i class="fas fa-sun"></i>
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="search-btn" aria-label="Buscar">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button class="hamburger" id="hamburgerBtn" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
 
-<header>
-    <h1>Tecnologia e Sustentabilidade no Campo</h1>
-    <button id="modoEscuro">Modo Escuro</button>
-</header>
-
-<main>
-    <section class="conteudo">
-        <img src="img/agricultura.jpg" alt="Agricultura moderna">
-
-        <h2>O Futuro da Agricultura</h2>
-
-        <p id="texto">
-            A tecnologia ajuda produtores rurais a economizar recursos,
-            aumentar a produção e preservar o meio ambiente.
-        </p>
-
-        <button id="mostrarMensagem">Saiba Mais</button>
-
-        <div id="mensagem" style="display:none;">
-            Sensores, drones e inteligência artificial tornam a agricultura mais eficiente e sustentável.
+    <!-- HERO SECTION (DESTAQUE) -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-main">
+                    <span class="hero-category">Destaque</span>
+                    <h2 class="hero-title">Juventude Rural e Ações Climáticas: O despertar de uma geração</h2>
+                    <p class="hero-excerpt">Para entender a origem do movimento que une juventude rural e ações climáticas, precisamos compreender que esse encontro é o resultado da fusão de duas lutas essenciais.</p>
+                    <div class="hero-meta">
+                        <span><i class="far fa-calendar-alt"></i> 15 de Março, 2025</span>
+                        <span><i class="far fa-clock"></i> 8 min de leitura</span>
+                    </div>
+                    <a href="#" class="btn-read">Leia mais <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&h=500&fit=crop" alt="Jovem rural no campo">
+                </div>
+            </div>
         </div>
     </section>
 
-    <section>
-        <h2>Envie sua opinião</h2>
-
-        <form>
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome">
-
-            <label for="comentario">Comentário:</label>
-            <input type="text" id="comentario">
-
-            <button type="button" id="enviar">Enviar</button>
-        </form>
-
-        <p id="resultado"></p>
+    <!-- FEED DE NOTÍCIAS (RENDERIZADO DINAMICAMENTE) -->
+    <section class="news-feed">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Últimas Notícias</h2>
+                <div class="section-line"></div>
+                <p class="section-subtitle">Acompanhe as principais histórias da juventude rural e sustentabilidade</p>
+            </div>
+            <div class="news-grid" id="newsGrid">
+                <!-- Os cards serão inseridos dinamicamente via JavaScript -->
+            </div>
+        </div>
     </section>
-</main>
 
-<script src="js/script.js"></script>
+    <!-- SEÇÃO DE DESTAQUES SECUNDÁRIOS -->
+    <section class="featured-articles">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Artigos em Destaque</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="featured-grid">
+                <div class="featured-card large">
+                    <div class="featured-badge">Movimento</div>
+                    <h3>Origem do Movimento: A fusão das lutas</h3>
+                    <p>A luta pela sobrevivência da agricultura familiar (anos 1980/1990) encontra a urgência do ativismo climático global (anos 2010).</p>
+                    <a href="#">Ler artigo <i class="fas fa-chevron-right"></i></a>
+                </div>
+                <div class="featured-card">
+                    <div class="featured-badge">Agricultura</div>
+                    <h3>Raízes no Campo</h3>
+                    <p>Jovens percebem os efeitos das mudanças climáticas na agricultura e na vida das comunidades rurais.</p>
+                    <a href="#">Ler artigo <i class="fas fa-chevron-right"></i></a>
+                </div>
+                <div class="featured-card">
+                    <div class="featured-badge">Sustentabilidade</div>
+                    <h3>Agroecologia em Foco</h3>
+                    <p>Práticas agrícolas sustentáveis e uso consciente dos recursos naturais ganham importância.</p>
+                    <a href="#">Ler artigo <i class="fas fa-chevron-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO DE LINHA DO TEMPO -->
+    <section class="timeline-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Linha do Tempo</h2>
+                <div class="section-line"></div>
+                <p class="section-subtitle">A jornada da juventude rural na defesa do clima</p>
+            </div>
+            <div class="timeline-container">
+                <div class="timeline-item">
+                    <span class="timeline-year">1970</span>
+                    <p>Surgimento da consciência ambiental</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-year">1992</span>
+                    <p>ECO-92 e fortalecimento da sustentabilidade</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-year">2000</span>
+                    <p>Expansão da agricultura sustentável</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-year">2015</span>
+                    <p>Acordo de Paris e justiça climática</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-year">2018-20</span>
+                    <p>Mobilização global da juventude rural</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-year">2021-24</span>
+                    <p>Inovação sustentável no campo</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO DE CITAÇÃO -->
+    <section class="quote-section">
+        <div class="container">
+            <div class="quote-card">
+                <i class="fas fa-quote-left"></i>
+                <p>Protagonista na Luta Contra as Mudanças Climáticas: a juventude rural tem um papel fundamental no combate às mudanças climáticas, atuando na construção de um futuro mais sustentável.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="footer-logo">
+                        <i class="fas fa-leaf"></i>
+                        <span>Campo<span>emFoco</span></span>
+                    </div>
+                    <p>Valorizando o protagonismo jovem na construção de um campo mais justo, sustentável e desenvolvido.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="#">Sobre nós</a></li>
+                        <li><a href="#">Notícias</a></li>
+                        <li><a href="#">Eventos</a></li>
+                        <li><a href="#">Parceiros</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Suporte</h4>
+                    <ul>
+                        <li><a href="#">Contato</a></li>
+                        <li><a href="#">Política de Privacidade</a></li>
+                        <li><a href="#">Termos de uso</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Newsletter</h4>
+                    <p>Receba as últimas novidades</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Seu e-mail">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Campo em Foco - Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
